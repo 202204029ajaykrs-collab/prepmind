@@ -487,7 +487,7 @@ function Dashboard() {
       });
       
       setShowFeedbackForm(false);
-      showSnackbar(`Interview completed! Your score: ${res.data.totalScore}/100`, "success");
+  showSnackbar(`Interview completed! Your score: ${res.data.totalScore}/30`, "success");
       
       // Refresh analytics after feedback submission
       fetchAnalytics(user.uid);
@@ -1074,7 +1074,7 @@ function Dashboard() {
                           </Typography>
                           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                             <Typography variant="h3" color="primary">
-                              {analytics.averageScore}/100
+                              {analytics.averageScore}/30
                             </Typography>
                             <Box>
                               <Typography variant="body1">
@@ -1226,7 +1226,7 @@ function Dashboard() {
                                             Date: {interview.date || interview.timestamp || ''}
                                           </Typography>
                                           <Chip
-                                            label={`Score: ${interview.totalScore ?? 0}/100`}
+                                            label={`Score: ${interview.totalScore ?? 0}/30`}
                                             color="primary"
                                             size="small"
                                             sx={{ mt: 1 }}
@@ -1286,7 +1286,7 @@ function Dashboard() {
               📋 Interview Details - {selectedInterview?.role}
             </Typography>
             <Typography variant="body2" color="text.secondary" component="div">
-              {selectedInterview?.date} • {selectedInterview?.duration ?? 'N/A'} minutes • Score: {selectedInterview?.totalScore ?? 0}/100
+              {selectedInterview?.date} • {selectedInterview?.duration ?? 'N/A'} minutes • Score: {selectedInterview?.totalScore ?? 0}/30
             </Typography>
           </DialogTitle>
           <DialogContent>
